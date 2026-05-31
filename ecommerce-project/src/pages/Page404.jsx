@@ -8,7 +8,7 @@ export function Page404(){
        <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
          <Header/>
         
-         <div className="not-found-message">Data Not Found</div>
+         <div className="not-found-message">Page Not Found</div>
        </> 
     )
 }
