@@ -31,7 +31,7 @@ export function OrderPage({ cart }) {
 
           {orders.map((order) => {
             return (
-              <>
+              
                 <div key={order.id} className="order-container">
 
                   <div className="order-header">
@@ -93,9 +93,10 @@ export function OrderPage({ cart }) {
 
                   </div>
                 </div>
-              </>
+              
             )
           })}
+
         </div>
       </div>
     </>
