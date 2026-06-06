@@ -21,7 +21,7 @@ export function CheckoutPage({ cart ,loadCart}) {
     }
       fetchCheckOutData();
           
-  }, []);
+  }, [cart]);
   return (
     <>
       <title>Checkout</title>
