@@ -5,16 +5,16 @@ import axios from 'axios'
 export function Product({product,loadCart}){
     const[quantity,setQuantity] = useState(1);
    
-    function addToCart(){
+    const addToCart=
         async() =>{
-            axios.post('/api/cart-items',{
+           await axios.post('/api/cart-items',{
             productId:product.id,
             quantity      
         })
             await loadCart();
 
-        }
-    }
+        };
+    
 
 
     return(
@@ -67,7 +67,7 @@ export function Product({product,loadCart}){
                     </div>
 
                     <button className="add-to-cart-button button-primary" 
-                    onClick={ addToCart() }>
+                    onClick={addToCart}>
                         Add to Cart
                     </button>
         </div>

@@ -8,6 +8,7 @@ import { OrderPage } from './pages/orders/OrderPage'
 import { TrackingPage } from './pages/TrackingPage'
 import {Page404} from './pages/Page404'
 
+
 function App() {
 
   const[cart,setCart] = useState([]);
@@ -19,9 +20,9 @@ function App() {
   
 
   useEffect(() => {
-     async() =>{
-   await loadCart();
-     }
+
+    loadCart();
+     
   }, []);
 
   return(
