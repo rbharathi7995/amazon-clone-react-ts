@@ -4,12 +4,23 @@ import CartIcon from '../assets/images/icons/cart-icon.png'
 import SearchIcon from '../assets/images/icons/search-icon.png'
 import { NavLink } from 'react-router'
 import './Header.css'
+import { useState } from 'react'
+import { useNavigate,useSearchParams} from 'react-router'
 
 export function Header({cart}) {
 
+  const navigate=useNavigate();
+
+  //the reason behind of using useSearchParams is
+  //useState(search || '') → Search works and the input remembers the value from the URL after refresh.
+  const [searchParams] =useSearchParams();
+  const search = searchParams.get('searchInfo')
+ 
+  const [searchInfo,setSearchInfo] = useState(search || '');
+
   let totalQuantity = 0;
   cart.forEach((cartItem) => {
-    totalQuantity +=cartItem.quantity;
+    totalQuantity += cartItem.quantity;
   });
     return (
     <>
@@ -24,9 +35,19 @@ export function Header({cart}) {
         </div>
 
         <div className="middle-section">
-          <input className="search-bar" type="text" placeholder="Search" />
+          <input className="search-bar" type="text" placeholder="Search"
+           value={searchInfo} onChange ={(event) => {
+            setSearchInfo(event.target.value);
+          }}
+          />
 
-          <button className="search-button">
+          <button className="search-button"
+          onClick={() => {
+            console.log(searchInfo);
+            navigate(`/?searchInfo=${searchInfo}`);
+          }}
+          
+          >
             <img className="search-icon" src={SearchIcon} />
           </button>
         </div>
