@@ -20,9 +20,7 @@ export function Product({product,loadCart}){
             await loadCart();
 
         };
-  
-
-   
+    
 
     return(
         <div className="product-container"
@@ -50,11 +48,13 @@ export function Product({product,loadCart}){
                         ${formatCurrency(product.priceCents)}
                     </div>
 
-                    <div className="product-quantity-container">
-                        <select value={quantity} onChange={(event) =>{
+                    <div className="product-quantity-container"
+                     >
+                        <select
+                         data-testid="quantity-selector" value={quantity} onChange={(event) =>{
                           const quantityValue=Number(event.target.value);
                           setQuantity(quantityValue);
-                        
+                      
                         }} >
                             <option value="1">1</option>
                             <option value="2">2</option>
