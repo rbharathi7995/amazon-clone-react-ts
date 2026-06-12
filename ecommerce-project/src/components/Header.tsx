@@ -8,7 +8,14 @@ import './Header.css'
 import { useState } from 'react'
 import { useNavigate,useSearchParams} from 'react-router'
 
-export function Header({cart}) {
+type HeaderProps = {
+  cart :{
+    productId : string;
+    quantity : number;
+    deliveryOptionId : string;
+  } [];
+}
+export function Header({cart} : HeaderProps) {
 
   const navigate=useNavigate();
 
