@@ -6,7 +6,7 @@ A modern e-commerce web application built using React and Node.js.
 https://amazon-clone-react-zgp0.onrender.com
 
  ## GitHub Repository
-https://github.com/rbharathi7995/amazon-clone-react
+https://github.com/rbharathi7995/amazon-clone-react-ts
 
 ## Features
 
@@ -40,7 +40,7 @@ Technologies Used
 
 Clone the repository:
 
-git clone https://github.com/rbharathi7995/amazon-clone-react.git
+git clone https://github.com/rbharathi7995/amazon-clone-react-ts.git
 
 Move into the project:
 
