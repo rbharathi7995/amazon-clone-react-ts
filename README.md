@@ -33,6 +33,7 @@ Technologies Used
 • React Testing Library
 • Node.js
 • Express.js
+• TypeScript
 
 
 ## 📦 Installation
