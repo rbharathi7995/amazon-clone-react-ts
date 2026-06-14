@@ -2,9 +2,6 @@
 
 A modern e-commerce web application built using React and Node.js.
 
-## Live Demo
-https://amazon-clone-react-zgp0.onrender.com
-
  ## GitHub Repository
 https://github.com/rbharathi7995/amazon-clone-react-ts
 
