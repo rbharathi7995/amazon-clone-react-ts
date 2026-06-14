@@ -8,7 +8,6 @@ import { OrderPage } from './pages/orders/OrderPage'
 import { TrackingPage } from './pages/TrackingPage'
 import {Page404} from './pages/Page404'
 
-window.axios=axios;
 
 function App() {
 
